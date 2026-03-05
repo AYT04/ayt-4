@@ -11,7 +11,6 @@ FEEDS = [
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCgd5-BWtbgOw5Hx2wP3qxzg",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCtMVHI3AJD4Qk4hcbZnI9ZQ",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCs6KfncB4OV6Vug4o_bzijg",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCcsR1qrrMOhdzLlwb51Qtdg",
 ]
 
 # State to remember seen videos so we don't spam
