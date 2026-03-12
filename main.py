@@ -24,7 +24,7 @@ def check_feeds():
             if video_id not in seen_videos:
                 # On first run, it will fill the list without sending
                 if seen_videos: 
-                    msg = f"**{entry.author}** uploaded: {entry.link}"
+                    msg = f"{entry.author} uploaded: {entry.link}"
                     requests.post(WEBHOOK_URL, json={"content": msg})
                 seen_videos.add(video_id)
 
