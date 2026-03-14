@@ -5,7 +5,7 @@ import os
 
 # Configuration from Environment Variables
 WEBHOOK_URL = os.getenv("unwatched_DISCORD_WEBHOOK_URL")
-CHANNELS_FILE = "channels.txt"
+CHANNELS_FILE = "watch_later.txt"
 
 # State to remember seen videos so we don't spam
 seen_videos = set()
