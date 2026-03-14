@@ -3,9 +3,10 @@ import requests
 import time
 import os
 
-# Configuration from Environment Variables
-WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
-# List your 4 RSS feed URLs here
+WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")#discord will eventually fail as i won't be using it oneday
+# WEBHOOK_URL = os.getenv("MATRIX_WEBHOOK_URL")#my Matrix webhook for when i set that up someday
+# WEBHOOK_URL = os.getenv("XMPP_WEBHOOK_URL")#my XMPP webhook for when i set that up someday
+
 FEEDS = [
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCgd5-BWtbgOw5Hx2wP3qxzg",
@@ -29,6 +30,5 @@ def check_feeds():
                 seen_videos.add(video_id)
 
 while True:
-    print("Checking for new videos...")
     check_feeds()
-    time.sleep(600)  # Wait 10 minutes before checking again
+    time.sleep(600)#10 mins

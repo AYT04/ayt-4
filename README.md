@@ -19,7 +19,7 @@ No cap, staying on top of your favorite creators is a whole mood, but checking Y
 
 1. **Clone the Repo**
 ```bash
-git clone https://github.com/your-username/ayt-4.git
+git clone https://github.com/AYT04/ayt-4.git
 cd ayt-4
 
 ```
