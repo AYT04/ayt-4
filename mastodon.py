@@ -13,7 +13,7 @@ mastodon = Mastodon(
 )
 
 # Read RSS feed URLs
-with open('channels.txt', 'r') as f:
+with open('watch_later.txt', 'r') as f:
     feeds = [line.strip() for line in f if line.strip()]
 
 # Pick random feed and get latest video
