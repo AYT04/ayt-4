@@ -53,6 +53,8 @@ python main.py
 
 Wanna change the channels? Just hop into `main.py` and swap the URLs in the `FEEDS` list. Currently tracking some absolute legends, but you can make it your own.
 
+You can also base this off a file `.txt` or something similar.
+
 ## 📜 The Fine Print
 
 This project is licensed under the **GNU General Public License v3.0**. Basically, keep it open, keep it free, and don't be a gatekeeper. Check the `LICENSE` file for the full lore.
