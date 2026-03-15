@@ -1,64 +1,33 @@
-# 🚀 ayt-4: The Ultimate YT-to-Discord Plug
+# 📺 YouTube-to-Mastodon Automator
 
-No cap, staying on top of your favorite creators is a whole mood, but checking YouTube every five minutes is not it. `ayt-4` is a lightweight, high-key efficient Python bot that stalk—uh, *monitors*—your favorite channels and pings your Discord server the second they drop new heat.
+A collection of Python scripts designed to bridge the gap between your YouTube "Watch Later" list and your Mastodon feed. This project automates the process of sharing content and monitoring channel updates.
 
-## ✨ Why it Slays
+## 🚀 What's Inside?
 
-* **Real-Time Vibes:** Refreshes every 10 minutes so you’re never late to the comment section.
-* **Multi-Channel Energy:** Tracks up to 4 different RSS feeds simultaneously (standard setup).
-* **Zero Spam Policy:** Smart state management ensures you only get notified once per upload—we don't do that double-posting mess.
-* **Clean Code:** Written in Python using `feedparser` and `requests` for that buttery smooth performance.
+* **`mastodon.py`**: The star of the show. It reads a curated list of YouTube links and periodically shares a random video to your Mastodon followers.
+* **`main.py`**: A background monitor that checks specific YouTube RSS feeds every 10 minutes and sends alerts via Discord webhooks when new content drops.
+* **`watch_later.txt`**: Your personal library of links used by the bot to decide what to post next.
 
-## 🛠️ The Tech Stack
+## 🛠️ Setup
 
-* **Python 3.x** (The blueprint)
-* **feedparser** (To read the tea)
-* **requests** (To send it to Discord)
-
-## 📥 Getting Started (Tutorial Core)
-
-1. **Clone the Repo**
-```bash
-git clone https://github.com/AYT04/ayt-4.git
-cd ayt-4
-
-```
+1. **Environment Variables**: Create a `.env` file to store your secrets safely:
+* `MASTODON_A_TOKEN`: Your Mastodon access token.
+* `DISCORD_WEBHOOK_URL`: Your Discord webhook endpoint.
 
 
-2. **Install Dependencies**
-Don't be a local, install the requirements:
-```bash
-pip install -r requirements.txt
-
-```
-
-
-3. **Set Your Environment Variables**
-You need to feed the bot your Discord Webhook URL. It’s giving security:
-```bash
-export DISCORD_WEBHOOK_URL='your_webhook_link_here'
-
-```
-
-
-4. **Launch 🚀**
-```bash
-python main.py
-
-```
+2. **Configuration**:
+* Add your favorite YouTube channel RSS feeds to the `FEEDS` list in `main.py`.
+* Dump your "Watch Later" links directly into `watch_later.txt`.
 
 
 
-## ⚙️ Configuration
+## 🤖 How it Works
 
-Wanna change the channels? Just hop into `main.py` and swap the URLs in the `FEEDS` list. Currently tracking some absolute legends, but you can make it your own.
+The Mastodon script is built for "set it and forget it" automation. It pulls a random link from your text file, formats it into a "toot," and posts it at a regular interval—keeping your social presence active while you’re busy watching the videos yourself.
 
-You can also base this off a file `.txt` or something similar.
+## 📜 Future Plans
 
-## 📜 The Fine Print
-
-This project is licensed under the **GNU General Public License v3.0**. Basically, keep it open, keep it free, and don't be a gatekeeper. Check the `LICENSE` file for the full lore.
+* Support for Matrix and XMPP webhooks.
+* Expanded RSS parsing for non-YouTube sources.
 
 ---
-
-*Maintained with main character energy.* 💅
